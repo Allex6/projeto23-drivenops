@@ -7,6 +7,8 @@ dotenv.config();
 function App() {
   const [student, setStudent] = useState(null);
 
+  console.log('student', student);
+
   useEffect(async () => {
     const API_URL = process.env.REACT_APP_BASE_URL;
     console.log('API_URL', API_URL);
@@ -19,6 +21,7 @@ function App() {
         setStudent(student);
       }
     } catch (error) {
+      console.log('error', error);
       alert('Não foi possível realizar o sorteio!');
     }
   }, []);
