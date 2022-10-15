@@ -1,5 +1,8 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 function App() {
   const [student, setStudent] = useState(null);
